@@ -1,0 +1,63 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+    <div class="myBox">
+      <div class="flex-container" >
+
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/chess.jpg" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+    
+    <h2>CHESS</h2>
+    <p>
+      Date : June 3 2020 </br> Time : 12:30am
+    </p>
+    <button class="button" style="align-content: left;" > <a href="{% url 'pluton:registerevent1' %}" style="text-decoration:none" >REGISTER</a></button> 
+          
+       </div>
+      </div>
+     </div>
+     <div style="width:750px;height:750px;border:5px solid #000;">
+      <pre><h6>
+        <u>RULES AND REGULATIONS</u>
+        • No outside assistance during games is allowed
+        • Touch and Move rule has to be strictly followed
+        • The players may take more or less time over 
+         any individual move, but if one player exceeds 
+         their total available time, that player has lost the game
+        • Each chess player is required to record the 
+         chess moves in algebraic chess notation.
+        • If the chess player makes any illegal move
+           then the Arbiter shall give an extra time of 
+            2 minutes to the opponent player
+        • All the players must observe the code of 
+          conduct that is common for all the players.                
+        • Decision of Judges will be final and binding
+           on all teams<b>
+        • Registration fee: Rs 150</b>
+        • Winner: Rs 3000 
+        • Runner: Rs 1500
+       
+  
+      </h6>
+    </div>
+
+    
+
+     </div>
+     </div>
+    <br>
+
+    </div>
+  </div>
+</br>
+</br>
+</br>
+
+
+{% endblock %}

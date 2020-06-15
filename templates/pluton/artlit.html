@@ -1,0 +1,67 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron">
+
+      {% if user.is_authenticated %}
+
+
+
+
+    
+    <div class="myBox" style="padding-left: 300px;">
+      <p style="font-size: 50px; padding-left: 150px;" >ART AND LITERATURE</p>
+      <div class="flex-container" >
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/cw.jpg" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+      </br>
+    </br>
+          <button class="button button5" > <a href="{% url 'pluton:creativewriting' %}" style="text-decoration:none" >CREATIVE WRITING</a></button>
+          
+       </div>
+      </div>
+     </div>
+     <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static "pluton/tp.png" %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+       </br>
+     </br>
+   </br>
+         <button class="button button5" > <a href="{% url 'pluton:themepaint' %}" style="text-decoration:none" >THEME PAINTING</a></button>
+    
+        </div>
+      </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static "pluton/pic.jpg" %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+         </br>
+       </br>
+     </br>
+           <button class="button button5" > <a href="{% url 'pluton:photography' %}" style="text-decoration:none" >PHOTOGRAHY</a></button>
+      
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+    {% else %}
+    <h2>Register or Login </h2>
+{% endif %}
+
+{% endblock %}

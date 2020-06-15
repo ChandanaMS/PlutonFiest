@@ -1,0 +1,59 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+    <div class="myBox">
+      <div class="flex-container" >
+
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/pic.jpg" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+    
+    <h3>PHOTOGRAPHY</h3>
+    <h6>
+      Date : June 3 2020 </br> Time : 3:30pm
+    </h6>
+    <button class="button" style="align-content: left;" > <a href="{% url 'pluton:registerevent1' %}" style="text-decoration:none" >REGISTER</a></button> 
+          
+       </div>
+      </div>
+     </div>
+     <div style="width:750px;height:750px;border:5px solid #000;">
+      <pre><h6>
+        <u>RULES AND REGULATIONS</u>
+        • The photo must be in its original
+         state and cannot be altered in any way
+        • Violators will be removed from the contest, 
+          stripped of any prize(s).
+        • Submissions will not be accepted
+          once the deadline lapses.
+        • No Cameras or any material will be
+          provided by the host college.        
+        • Decision of Judges will be final and 
+          binding on all teams<b>
+        • Registration fee: Rs 200</b>
+        • Winner: Rs 3000 
+        • Runner: Rs 1500
+
+
+    </h6>
+  </div>
+
+  
+
+   </div>
+   </div>
+  <br>
+
+  </div>
+</div>
+</br>
+</br>
+</br>
+
+
+{% endblock %}

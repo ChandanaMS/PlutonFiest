@@ -1,0 +1,58 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+    <div class="myBox">
+      <div class="flex-container" >
+
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/bas.jpg" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+    
+    <h2>BASKETBALL</h2>
+    <p>
+      Date : June 3 2020 </br> Time : 10:30pm
+    </p>
+    <button class="button" style="align-content: left;" > <a href="{% url 'pluton:registerevent1' %}" style="text-decoration:none" >REGISTER</a></button> 
+          
+       </div>
+      </div>
+     </div>
+     <div style="width:750px;height:750px;border:5px solid #000;">
+      <pre><h6>
+        <u>RULES AND REGULATIONS</u>
+        • Each game round will be 25 minutes with an
+           immediate turnaround after each event.
+        • Sound signals will indicate the start
+           and the finish of each game.
+        • Teams must register a minimum of 3 players 
+           and a maximum of 5 players.
+        • No players may be added to, or changes made to
+           a team registration form after Round 1.
+        • All teams must wear similar uniforms, and 
+           the shirts must be clearly numbered.                        
+        • Decision of Judges will be final and binding on all teams<b>
+        • Registration fee: Rs 150 per team</b>
+        • Winner: Rs 3000 
+        • Runner: Rs 1500
+              </h6>
+    </div>
+
+    
+
+     </div>
+     </div>
+    <br>
+
+    </div>
+  </div>
+</br>
+</br>
+</br>
+
+
+{% endblock %}

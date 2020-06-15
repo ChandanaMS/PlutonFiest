@@ -1,0 +1,131 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+
+{% load static %}
+<div class="container">
+  <div class="jumbotron">
+
+    {% if user.is_authenticated %}
+
+
+    <div class="myBox">
+      <p id ="head" >DOMAINS</p>
+      <div class="flex-container" >
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/cul.png" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+      </br>
+    </br>
+          <button class="button button5" > <a href="{% url 'pluton:culturals' %}" style="text-decoration:none" >Culturals</a></button>
+          
+       </div>
+      </div>
+     </div>
+     <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static "pluton/sat.jpg" %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+       </br>
+     </br>
+   </br>
+         <button class="button button5" > <a href="{% url 'pluton:scitech' %}" style="text-decoration:none" >Science and Technology</a></button>
+    
+        </div>
+      </div>
+      </div>
+
+      </div>
+
+    
+
+    <div class="myBox" style="padding-left: 300px;">
+      <div class="flex-container" >
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/art.jpg" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+      </br>
+    </br>
+          <button class="button button5" > <a href="{% url 'pluton:artlit' %}" style="text-decoration:none" >Art and Literature</a></button>
+          
+       </div>
+      </div>
+     </div>
+     <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static "pluton/spo.jpg" %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+       </br>
+     </br>
+   </br>
+         <button class="button button5" > <a href="{% url 'pluton:sports' %}" style="text-decoration:none" >Sports</a></button>
+    
+        </div>
+      </div>
+      </div>
+
+      </div>
+
+
+<!--
+
+
+
+
+
+
+
+       <div class="flex-container" style="padding-left: 300px;" >
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static "pluton/spo.jpg" %}"alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+            </br>
+           </br>
+         </br>
+             <button  class="button button5" > <a href="{% url 'pluton:sports' %}" style="text-decoration:none" >Sports</a></button>
+               
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{% static "pluton/sat.jpg" %}" alt="Avatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+             </br>
+           </br>
+         </br>
+               <button class="button button5" > <a href="{% url 'pluton:scitech' %}" style="text-decoration:none" >Science and Technology</a></button>
+          
+              </div>
+            </div>
+            </div>
+      
+
+     </div>
+     </div>
+    <br>
+    -->
+    
+  </div>
+</div>
+{% else %}
+<h2>Register or Login </h2>
+{% endif %}
+{% endblock %}

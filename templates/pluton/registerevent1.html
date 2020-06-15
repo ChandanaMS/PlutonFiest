@@ -1,0 +1,21 @@
+{% extends "pluton/base.html" %}
+{% load static %}
+{% block body_block %}
+<h1> EVENT REGISTERATION </h1>
+  <div class="container">
+    <div class="jumbotron">
+      {% if registeredevent %}
+        <h1>Proceed to payment to finish registeration</h1>
+      {% else %}
+        <h1>Event Registeration</h1>
+        <h3>Just fill the details to register for event.</h3>
+       <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{regevent_form.as_p }}
+          <input type="submit" name="" value="Proceed to Pay">
+        </form>
+        
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

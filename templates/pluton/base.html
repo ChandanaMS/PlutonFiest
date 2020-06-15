@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html>
+  {% load static %}
+<link rel='stylesheet' href="{% static 'pluton/style.css' %}">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Base</title>
+    <style>
+      ul {
+      
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      .button {
+	background-color:yellow;
+	border: none;
+	color:white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: yellow;}
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #111;
+      }
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.myBox {
+border: none;
+padding: 5px;
+font: 24px/36px sans-serif;
+width: 1500px;
+height: 680px;
+background-color: white;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flex-container {
+  display: flex;
+  padding-top:50px;
+  padding-left: 200px ;
+  z-index: -1;
+  background-color:white;
+  clear :right;
+}
+.flex-container1 {
+  display: flex;
+  padding-left: 200px ;
+  z-index: -1;
+  background-color: white;
+  clear :right;
+}
+
+.flex-container > div {
+  background-color:white ;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+.flex-container1 > div {
+  background-color:white ;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+#head{
+  color: black;
+  font-family: 'Karma';
+  font-size: 50px;
+  text-align: center;
+}
+
+#heading{
+font-size:70px;
+text-align: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color:#333;
+}
+
+.flip-card-back {
+  background-color:white;
+  color: black;
+  transform: rotateY(180deg);
+}
+#head{
+  color: black;
+  font-family: 'Karma';
+  font-size: 50px;
+  text-align: center;
+}
+</style>
+</head>
+  <body>    
+
+     <img src="{% static "pluton/title.png" %}"  style="width:500px;height:100px;">
+      <div class="container">
+        <ul>
+{# Django Home Link / Admin Link / Register Link#}
+
+
+            <li><a class="navbar-brand" href="{% url 'pluton:index' %}">DJANGO</a></li>
+            <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+            <li><a class="#chatbot" href="{% url 'pluton:chatbot' %}">FAQbot</a></li>
+            <li><a class="navbar-link" href="{% url 'pluton:register' %}">Register</a></li>     
+            {# Some logic on what to display for last item#}
+            {% if user.is_authenticated %}
+              <li><a href="{% url 'pluton:logout' %}">Logout</a></li>
+            {% else %}
+              <li><a class="navbar-link" href="{% url 'pluton:user_login' %}">Login</a></li>
+            {% endif %}
+
+
+
+
+
+
+
+
+</ul>
+
+</br>
+</br>
+
+
+  
+
+    <div class="container">
+    {% block body_block %}
+    {% endblock %}
+
+
+  </br>
+</br>
+</br>
+  </br>    </br>
+
+</br>
+</br>
+</br>
+</br>
+
+
+  
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+ 
+    <h3>PLUTON FIESTA</h3>
+ 
+    <p class="footer-links">
+ 
+   ·
+    <a href="{% url 'pluton:about' %}">AboutUs</a>
+  ·
+    
+
+
+  ·
+    </p>
+ 
+    <p class="footer-company-name">PlutonFiesta &copy; 2020</p>
+    </div>
+ 
+    <div class="footer-center">
+ 
+    <div>
+    <i class="fa fa-map-marker"></i>
+    <p><span>PES University,B-block,G09 </span> Banglore, India</p>
+    </div>
+ 
+    <div>
+    <i class="fa fa-phone"></i>
+    <p>+91 9490956789</p>
+    </div>
+ 
+    <div>
+    <i class="fa fa-envelope"></i>
+    <p><a href="#">contact@plutonfiesta2020.com</a></p>
+    </div>
+ 
+    </div>
+ 
+    <div class="footer-right">
+ 
+    <p class="footer-company-about">
+    <span>About the company</span>
+  Pluton Fiesta is a website for fests .
+    </p>
+ 
+ 
+    </div>
+ 
+    </div>
+ 
+    </footer>
+  
+  </body>
+</html>
+
+

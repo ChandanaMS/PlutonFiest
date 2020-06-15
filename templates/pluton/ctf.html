@@ -1,0 +1,62 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+    <div class="myBox">
+      <div class="flex-container" >
+
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/ctf.png" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+    
+    <h2>CTF</h2>
+    <h6>
+      Date : June 3 2020 </br> Time : 12:30pm
+    </h6>
+    <button class="button" style="align-content: left;" > <a href="{% url 'pluton:registerevent1' %}" style="text-decoration:none" >REGISTER</a></button> 
+          
+       </div>
+      </div>
+     </div>
+     <div style="width:750px;height:750px;border:5px solid #000;">
+      <pre><h6>
+        <u>RULES AND REGULATIONS</u>
+        * Only team entries are eligible, and team 
+          shall consist of three persons 
+        * The decision of the quiz-master will be final
+          and will not be subjected to any change. 
+        * The participants shall not be allowed to
+          use mobile or other electronic devices.
+        * The questions shall be in the form of
+          multiple choice, True / False statement, etc. 
+        * Audience/Supporters shall not give any 
+          hints or clues to the competitors. 
+        * Replacement of any participant of a
+          team is not allowed after registration        
+        * Decision of Judges will be final and 
+          binding on all teams<b>
+        *	Registration fee:<u>Rs 300 per team</u>
+        *	Winner: Rs 3000 
+        *	Runner: Rs 1500
+        *	Any queries? contact: XYZ – 9876543219
+      </h6>
+    </div>
+
+    
+
+     </div>
+     </div>
+    <br>
+
+    </div>
+  </div>
+</br>
+</br>
+</br>
+
+
+{% endblock %}

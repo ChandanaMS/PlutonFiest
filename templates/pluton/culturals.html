@@ -1,0 +1,53 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron">
+
+      {% if user.is_authenticated %}
+
+
+
+
+    
+    <div class="myBox" style="padding-left: 300px;">
+      <p style="font-size: 50px; padding-left: 150px;" >CULTURAL EVENTS</p>
+      <div class="flex-container" >
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/st.jpg" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+      </br>
+    </br>
+          <button class="button button5" > <a href="{% url 'pluton:streetplay' %}" style="text-decoration:none" >STREETPLAY</a></button>
+          
+       </div>
+      </div>
+     </div>
+     <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static "pluton/wb.jpg" %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+       </br>
+     </br>
+   </br>
+         <button class="button button5" > <a href="{% url 'pluton:westernband' %}" style="text-decoration:none" >WESTERN BAND</a></button>
+    
+        </div>
+      </div>
+      </div>
+
+      </div>
+
+
+    {% else %}
+    <h2>Register or Login </h2>
+{% endif %}
+
+{% endblock %}

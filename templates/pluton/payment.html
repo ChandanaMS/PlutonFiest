@@ -1,0 +1,23 @@
+{% extends "pluton/base.html" %}
+{% load static %}
+{% block body_block %}
+<h1>PAYMENT</h1>
+  <div class="container">
+    <div class="jumbotron">
+      {% if paid %}
+        <h1>Thank you for registering to the event!</h1>
+      {% else %}
+        <h1>Pay Here</h1>
+        <h3>Just fill the details to complete payment.</h3>
+<form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ payment_form.as_p }}
+          <h3>Total Amount </h3>
+          <input type="submit" name="" value="Payment">
+        </form>
+        
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+

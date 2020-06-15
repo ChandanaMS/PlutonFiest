@@ -1,0 +1,67 @@
+{% extends 'pluton/base.html' %}
+{% block body_block %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron">
+
+      {% if user.is_authenticated %}
+
+
+
+
+    
+    <div class="myBox" style="padding-left: 300px;">
+      <p style="font-size: 50px; padding-left: 150px;" >SCIENCE AND TECHNOLOGY</p>
+      <div class="flex-container" >
+       <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/ctf.png" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+      </br>
+    </br>
+          <button class="button button5" > <a href="{% url 'pluton:ctf' %}" style="text-decoration:none" >CTF</a></button>
+          
+       </div>
+      </div>
+     </div>
+     <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static "pluton/qu.jpg" %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+       </br>
+     </br>
+   </br>
+         <button class="button button5" > <a href="{% url 'pluton:sciencequiz' %}" style="text-decoration:none" >SCIENCE QUIZ</a></button>
+    
+        </div>
+      </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+           <img src="{% static "pluton/hac.png" %}" style="width:300px;height:300px;">
+         </div>
+        <div class="flip-card-back">
+        </br>
+      </br>
+    </br>
+          <button class="button button5" > <a href="{% url 'pluton:hackathon' %}" style="text-decoration:none" >HACKATHON</a></button>
+          
+       </div>
+      </div>
+     </div>
+
+      </div>
+
+
+    {% else %}
+    <h2>Register or Login </h2>
+{% endif %}
+
+{% endblock %}
